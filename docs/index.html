@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FlexPlus — Support & Privacy</title>
+  <meta name="description" content="FlexPlus Support and Privacy Policy" />
+  <style>
+    :root {
+      --bg: #0b0d12;
+      --card: rgba(255,255,255,.06);
+      --stroke: rgba(255,255,255,.10);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --muted2: rgba(255,255,255,.55);
+      --accent: #3b82f6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 500px at 20% 15%, rgba(59,130,246,.18), transparent 60%),
+        radial-gradient(900px 500px at 85% 20%, rgba(255,255,255,.10), transparent 55%),
+        radial-gradient(900px 500px at 55% 85%, rgba(59,130,246,.12), transparent 60%),
+        var(--bg);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 64px;
+    }
+
+    .header {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo {
+      width: 44px; height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(59,130,246,.95), rgba(59,130,246,.55));
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: .2px;
+    }
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .lang {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 999px;
+      padding: 6px;
+      backdrop-filter: blur(18px);
+    }
+    .lang button{
+      cursor: pointer;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-weight: 800;
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+    .lang button.active{
+      color: var(--text);
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (max-width: 860px){
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: 22px;
+      padding: 18px;
+      backdrop-filter: blur(18px);
+      box-shadow: 0 18px 40px rgba(0,0,0,.25);
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    p { margin: 10px 0; color: var(--muted); }
+    ul { margin: 10px 0; padding-left: 18px; color: var(--muted); }
+    li { margin: 6px 0; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      color: var(--text);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .muted2 { color: var(--muted2); font-weight: 700; font-size: 12px; }
+    .k {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: rgba(59,130,246,.18);
+      border: 1px solid rgba(59,130,246,.25);
+      color: rgba(255,255,255,.90);
+      font-weight: 800;
+      font-size: 12px;
+    }
+
+    .footer{
+      margin-top: 18px;
+      color: var(--muted2);
+      font-size: 12px;
+    }
+    .sep{ height:1px; background: rgba(255,255,255,.10); margin: 14px 0; border-radius: 1px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="header">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>FlexPlus</h1>
+          <p class="sub" id="subtitle">Support & Privacy Policy</p>
+        </div>
+      </div>
+
+      <div class="lang" role="tablist" aria-label="Language">
+        <button id="btn-en" class="active" onclick="setLang('en')" role="tab" aria-selected="true">EN</button>
+        <button id="btn-sv" onclick="setLang('sv')" role="tab" aria-selected="false">SV</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- Support -->
+      <section class="card" id="support">
+        <h2 id="supportTitle">Support</h2>
+        <p id="supportIntro">
+          Need help with FlexPlus? Contact us and we’ll get back to you as soon as possible.
+        </p>
+
+        <div class="sep"></div>
+
+        <p class="muted2" id="supportHint">Best way to reach us:</p>
+        <p>
+          <span class="pill">Email</span>
+          &nbsp; <a id="supportEmail" href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+        </p>
+
+        <p class="muted2" id="supportInclude">Please include:</p>
+        <ul id="supportBullets">
+          <li>Device model & iOS version</li>
+          <li>What you expected vs what happened</li>
+          <li>Screenshots if possible</li>
+        </ul>
+
+        <div class="sep"></div>
+
+        <p class="muted2" id="supportApp">App:</p>
+        <p>
+          <span class="k" id="appName">FlexPlus</span>
+          <span class="muted2">•</span>
+          <span class="muted2" id="appCategory">Time tracking</span>
+        </p>
+      </section>
+
+      <!-- Privacy -->
+      <section class="card" id="privacy">
+        <h2 id="privacyTitle">Privacy Policy</h2>
+        <p id="privacyIntro">
+          FlexPlus is designed to keep your data private. We do not sell your data.
+        </p>
+
+        <div class="sep"></div>
+
+        <h2 style="margin-top:0" id="privacyCollectTitle">What we collect</h2>
+        <ul id="privacyCollect">
+          <li><b>App data you create</b> (e.g., time entries and settings) stored locally on your device.</li>
+          <li><b>Purchases</b> are handled by Apple (StoreKit). We do not receive your payment details.</li>
+        </ul>
+
+        <h2 id="privacyShareTitle">Data sharing</h2>
+        <ul id="privacyShare">
+          <li>We do not share or sell personal data to third parties.</li>
+          <li>Apple may process purchase and subscription information as part of the App Store.</li>
+        </ul>
+
+        <h2 id="privacyRetentionTitle">Data retention</h2>
+        <ul id="privacyRetention">
+          <li>Your entries remain on your device unless you delete the app or remove them.</li>
+        </ul>
+
+        <h2 id="privacyContactTitle">Contact</h2>
+        <p id="privacyContact">
+          For privacy questions, email us at <a id="privacyEmail" href="mailto:privacy@yourdomain.com">privacy@yourdomain.com</a>.
+        </p>
+
+        <p class="footer" id="privacyUpdated">Last updated: 2026-01-13</p>
+      </section>
+    </div>
+
+    <p class="footer" id="footerNote">
+      This page contains both Support and Privacy Policy for FlexPlus.
+    </p>
+  </div>
+
+  <script>
+    const copy = {
+      en: {
+        subtitle: "Support & Privacy Policy",
+
+        supportTitle: "Support",
+        supportIntro: "Need help with FlexPlus? Contact us and we’ll get back to you as soon as possible.",
+        supportHint: "Best way to reach us:",
+        supportInclude: "Please include:",
+        supportBullets: [
+          "Device model & iOS version",
+          "What you expected vs what happened",
+          "Screenshots if possible"
+        ],
+        appCategory: "Time tracking",
+
+        privacyTitle: "Privacy Policy",
+        privacyIntro: "FlexPlus is designed to keep your data private. We do not sell your data.",
+        privacyCollectTitle: "What we collect",
+        privacyCollect: [
+          "<b>App data you create</b> (e.g., time entries and settings) stored locally on your device.",
+          "<b>Purchases</b> are handled by Apple (StoreKit). We do not receive your payment details."
+        ],
+        privacyShareTitle: "Data sharing",
+        privacyShare: [
+          "We do not share or sell personal data to third parties.",
+          "Apple may process purchase and subscription information as part of the App Store."
+        ],
+        privacyRetentionTitle: "Data retention",
+        privacyRetention: [
+          "Your entries remain on your device unless you delete the app or remove them."
+        ],
+        privacyContactTitle: "Contact",
+        privacyContact: "For privacy questions, email us at ",
+        privacyUpdated: "Last updated: 2026-01-13",
+
+        footerNote: "This page contains both Support and Privacy Policy for FlexPlus."
+      },
+
+      sv: {
+        subtitle: "Support & Integritetspolicy",
+
+        supportTitle: "Support",
+        supportIntro: "Behöver du hjälp med FlexPlus? Kontakta oss så återkommer vi så snart vi kan.",
+        supportHint: "Bästa sättet att nå oss:",
+        supportInclude: "Ta gärna med:",
+        supportBullets: [
+          "Enhetsmodell & iOS-version",
+          "Vad du förväntade dig vs vad som hände",
+          "Skärmbilder om möjligt"
+        ],
+        appCategory: "Tidrapportering",
+
+        privacyTitle: "Integritetspolicy",
+        privacyIntro: "FlexPlus är byggd för att hålla din data privat. Vi säljer inte din data.",
+        privacyCollectTitle: "Vad vi samlar in",
+        privacyCollect: [
+          "<b>Data du skapar i appen</b> (t.ex. tidposter och inställningar) lagras lokalt på din enhet.",
+          "<b>Köp</b> hanteras av Apple (StoreKit). Vi får aldrig dina betaluppgifter."
+        ],
+        privacyShareTitle: "Delning av data",
+        privacyShare: [
+          "Vi delar eller säljer inte persondata till tredje part.",
+          "Apple kan behandla köp- och prenumerationsinformation via App Store."
+        ],
+        privacyRetentionTitle: "Lagringstid",
+        privacyRetention: [
+          "Dina poster finns kvar på enheten tills du tar bort dem eller avinstallerar appen."
+        ],
+        privacyContactTitle: "Kontakt",
+        privacyContact: "För frågor om integritet, mejla oss på ",
+        privacyUpdated: "Senast uppdaterad: 2026-01-13",
+
+        footerNote: "Den här sidan innehåller både Support och Integritetspolicy för FlexPlus."
+      }
+    };
+
+    function setLang(lang){
+      const en = lang === "en";
+      document.getElementById("btn-en").classList.toggle("active", en);
+      document.getElementById("btn-sv").classList.toggle("active", !en);
+      document.getElementById("btn-en").setAttribute("aria-selected", en ? "true" : "false");
+      document.getElementById("btn-sv").setAttribute("aria-selected", !en ? "true" : "false");
+
+      const c = copy[lang];
+
+      document.getElementById("subtitle").textContent = c.subtitle;
+
+      document.getElementById("supportTitle").textContent = c.supportTitle;
+      document.getElementById("supportIntro").textContent = c.supportIntro;
+      document.getElementById("supportHint").textContent = c.supportHint;
+      document.getElementById("supportInclude").textContent = c.supportInclude;
+
+      const ulSupport = document.getElementById("supportBullets");
+      ulSupport.innerHTML = "";
+      c.supportBullets.forEach(t => {
+        const li = document.createElement("li");
+        li.textContent = t;
+        ulSupport.appendChild(li);
+      });
+
+      document.getElementById("appCategory").textContent = c.appCategory;
+
+      document.getElementById("privacyTitle").textContent = c.privacyTitle;
+      document.getElementById("privacyIntro").textContent = c.privacyIntro;
+
+      document.getElementById("privacyCollectTitle").textContent = c.privacyCollectTitle;
+      const ulCollect = document.getElementById("privacyCollect");
+      ulCollect.innerHTML = "";
+      c.privacyCollect.forEach(html => {
+        const li = document.createElement("li");
+        li.innerHTML = html;
+        ulCollect.appendChild(li);
+      });
+
+      document.getElementById("privacyShareTitle").textContent = c.privacyShareTitle;
+      const ulShare = document.getElementById("privacyShare");
+      ulShare.innerHTML = "";
+      c.privacyShare.forEach(t => {
+        const li = document.createElement("li");
+        li.textContent = t;
+        ulShare.appendChild(li);
+      });
+
+      document.getElementById("privacyRetentionTitle").textContent = c.privacyRetentionTitle;
+      const ulRet = document.getElementById("privacyRetention");
+      ulRet.innerHTML = "";
+      c.privacyRetention.forEach(t => {
+        const li = document.createElement("li");
+        li.textContent = t;
+        ulRet.appendChild(li);
+      });
+
+      document.getElementById("privacyContactTitle").textContent = c.privacyContactTitle;
+      const privacyContact = document.getElementById("privacyContact");
+      const emailLink = document.getElementById("privacyEmail");
+      privacyContact.innerHTML = c.privacyContact + emailLink.outerHTML + ".";
+
+      document.getElementById("privacyUpdated").textContent = c.privacyUpdated;
+      document.getElementById("footerNote").textContent = c.footerNote;
+
+      document.documentElement.lang = lang;
+    }
+
+    // default: EN
+    setLang("en");
+  </script>
+</body>
+</html>
